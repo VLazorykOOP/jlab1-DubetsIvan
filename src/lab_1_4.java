@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
-public class Main {
+public class main {
     public static void main(String[] args) {
-        String text = "Цей текст містить слова різної довжини, включаючи: короткі, довгі, середні.";
+        String text = "Цей текст містить слова різної довжини, включаючи: короткі, довгі, середні, парні і непарніі. Ці слоова маютть парнуу кількістьь букв";
         
         String result = removeOddLengthWords(text);
         
@@ -20,6 +20,6 @@ public class Main {
             }
         }
 
-        return String.join("", filteredWords);
+        return String.join(" ", filteredWords).replaceAll("\\s+(?=\\p{Punct})", "");
     }
 }
