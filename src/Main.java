@@ -19,9 +19,9 @@ public class Main {
 
     public static void main(String[] args) {
 	    Scanner sc = new Scanner(System.in);
-        System.out.println("Введіть значення х: ");
+        System.out.println("Введiть значення х: ");
         double x = sc.nextDouble();
-        System.out.println("Введіть значеня у: ");
+        System.out.println("Введiть значеня у: ");
         double y = sc.nextDouble();
 
         double result = calculate(x, y);

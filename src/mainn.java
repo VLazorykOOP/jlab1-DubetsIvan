@@ -2,12 +2,12 @@ import java.util.ArrayList;
 
 public class mainn {
     public static void main(String[] args) {
-        String text = "Цей текст містить слова різної довжини, включаючи: короткі, довгі, середні, парні і непарніі. Ці слоова маютть парнуу кількістьь букв";
+        String text = "Цей текст мiстить слова рiзної довжини, включаючи: короткi, довгi, середнi, парнi i непарнii. Цi слоова маютть парнуу кiлькiстьь букв";
         
         String result = removeOddLengthWords(text);
         
-        System.out.println("Оригінальний текст: " + text);
-        System.out.println("Текст після видалення слів непарної довжини: " + result);
+        System.out.println("Оригiнальний текст: " + text);
+        System.out.println("Текст пiсля видалення слiв непарної довжини: " + result);
     }
 
     public static String removeOddLengthWords(String text) {

@@ -4,21 +4,21 @@ public class ArrayShift {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Введіть розмір масиву n (не більше 200): ");
+        System.out.print("Введiть розмiр масиву n (не бiльше 200): ");
         int n = scanner.nextInt();
         
         if (n > 200) {
-            System.out.println("Розмір масиву не може перевищувати 200.");
+            System.out.println("Розмiр масиву не може перевищувати 200.");
             return;
         }
 
         int[] a = new int[n];
-        System.out.println("Введіть елементи масиву:");
+        System.out.println("Введiть елементи масиву:");
         for (int i = 0; i < n; i++) {
             a[i] = scanner.nextInt();
         }
 
-        System.out.print("Введіть значення k: ");
+        System.out.print("Введiть значення k: ");
         int k = scanner.nextInt();
 
         k = k % n;
@@ -28,7 +28,7 @@ public class ArrayShift {
             reverse(a, k, n - 1);
         }
 
-        System.out.println("Масив після циклічного зсуву:");
+        System.out.println("Масив пiсля зсуву:");
         for (int i = 0; i < n; i++) {
             System.out.print(a[i] + " ");
         }
