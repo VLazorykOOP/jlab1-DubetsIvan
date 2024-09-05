@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
 public class matrix{
-    Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
     System.out.println("Введіть розмір матриці (не більше 15): ");
     int n = sc.nextInt();
@@ -14,16 +15,31 @@ public class matrix{
     int[][] a = new int[n][n];
 
     System.out.println("Введіть елементи матриці: ");
-    for (int i = 0; i < n; i++){
-        for (int j = 0; j < n; j++){
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
             a[i][j] = sc.nextInt();
         }
     }
 
-    int max = Integer.MIN_VALUE;
-    for (int i = 1; i < n; i++) {
+    int[] diag = new int[n];
+    for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++){
-            if (a[i][j] > max) {
+            if (i <= j){
+                diag[j] = a[i][j];
+                //System.out.println(a[i][j]);
+                if (j > n - 1){
+                    break;
+                }
+            }
+        }
+    }
+
+    int max = -99999;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++){
+            if (i != j && i >= j && a[i][j] > max) {
                 max = a[i][j];
             }
         }
@@ -33,10 +49,11 @@ public class matrix{
     for (int i = 0; i < n; i++){
         for (int j = i; j < n; j++){
             if (a[i][j] > max){
-                sum = sum + a[i][j];
+                sum += a[i][j];
             }
         }
     }
 
     System.out.println("Результат: " + sum);
+    }
 }

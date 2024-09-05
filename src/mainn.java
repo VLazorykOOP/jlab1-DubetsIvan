@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class main {
+public class mainn {
     public static void main(String[] args) {
         String text = "Цей текст містить слова різної довжини, включаючи: короткі, довгі, середні, парні і непарніі. Ці слоова маютть парнуу кількістьь букв";
         
